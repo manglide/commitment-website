@@ -1,3 +1,6 @@
 .card-body {
   text-align: justify;
 }
+.media-body a {
+  color: #000;
+}

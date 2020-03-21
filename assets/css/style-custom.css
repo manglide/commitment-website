@@ -4,3 +4,6 @@
 .media-body a {
   color: #000;
 }
+li {
+  list-style: circle;
+}

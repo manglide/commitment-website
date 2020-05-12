@@ -104,12 +104,19 @@
                             <div class="col-lg-6 col-md-9 ">
                                 <div class="hero__caption">
                                     <span data-animation="fadeInUp" data-delay=".4s">Merchants, Marketers, Business Owners and Internet Stores</span>
-                                    <h1 data-animation="fadeInUp" data-delay=".6s">Make and Fulfill deals<br>with ease</h1>
+                                    <h1 data-animation="fadeInUp" data-delay=".6s">Make and Fulfill deals with ease, safety and trust</h1>
                                     <p data-animation="fadeInUp" data-delay=".8s">using the Commitment App.</p>
                                     <!-- Slider btn -->
                                    <div class="slider-btns">
                                         <!-- Hero-btn -->
-                                        <a data-animation="fadeInLeft" data-delay="1.0s" href="#" class="btn radius-btn">Download</a>
+                                        <!-- <a data-animation="fadeInLeft" data-delay="1.0s" href="#" class="btn radius-btn">Download</a> -->
+                                        <form id="form-inline" class="form-inline d-flex">
+                                            <input type="email"
+                                              class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+                                              id="inputEmail" placeholder="Enter email address...">
+                                              <button type="submit" class="btn btn-primary mx-auto">Get Early Access</button>
+                                        </form>
+                                        <!-- <a data-animation="fadeInLeft" data-delay="1.0s" href="#" class="btn radius-btn">Coming Soon. Click to get early access</a> -->
                                         <!-- Video Btn -->
                                         <!--<a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn ani-btn" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><i class="fas fa-play"></i></a>-->
                                    </div>
@@ -331,7 +338,8 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-6 col-md-8">
                         <div class="section-tittle section-tittle2 text-center">
-                            <h2>Our Charges</h2>
+                            <!-- <h2>Our Charges</h2> -->
+                            <h2>We charge N5 flat fee only</h2>
                         </div>
                     </div>
                 </div>
@@ -477,14 +485,14 @@
                               </div>
                             </div>
                             <div class="card">
-                              <div class="card-header" id="headingThree">
-                                <h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              <div class="card-header" id="headingeleven">
+                                <h5 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseeleven" aria-expanded="false" aria-controls="collapseThree">
 
                                     How much do you charge for transfers and disbursements?
 
                                 </h5>
                               </div>
-                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                              <div id="collapseeleven" class="collapse" aria-labelledby="headingeleven" data-parent="#accordion">
                                 <div class="card-body">
                                   Transfer fees are as stipulated by CBN.
                                   <ol>
@@ -492,6 +500,8 @@
                                     <li>For transactions between N5,001 and N50,000, the charge N25.00</li>
                                     <li>For transactions above N50,000, the charge N50.00</li>
                                   </ol>
+                                  <a style="color:#3972C1"
+                                  href="https://www.cbn.gov.ng/Out/2019/CCD/Guide%20to%20Charges%20by%20Banks%20Other%20Financial%20and%20Non-Financial%20Institutions%20eff%20Jan%201%202020.pdf" target="_blank">CBN Transfer Charges - Page 36</a>
                                 </div>
                               </div>
                             </div>
@@ -544,7 +554,7 @@
                               </div>
                               <div id="collapseseven" class="collapse" aria-labelledby="headingseven" data-parent="#accordion">
                                 <div class="card-body">
-                                  Instantly.
+                                  Your payment is available T+1 day(s). Thats basically 1 business day as our Payment Gateway provider releases the pool of funds in their custody. If your payment is approved on thursday, you'll get credited on Friday.
                                 </div>
                               </div>
                             </div>
@@ -662,7 +672,7 @@
                               <div class="media contact-info">
                                   <span class="contact-info__icon"><i class="fab fa-whatsapp"></i></span>
                                   <div class="media-body">
-                                      <h3>08146382332</h3>
+                                      <h3>08182596453</h3>
                                       <p>Chat us on WhatsApp</p>
                                   </div>
                               </div>
@@ -863,6 +873,11 @@
 		<!-- Jquery Plugins, main Jquery -->
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+        <script src="assets/js/firebase.js"></script>
 
     </body>
 </html>

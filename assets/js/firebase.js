@@ -1,15 +1,3 @@
-// // Initialize Firebase
-// // TODO: Replace with your project's customized code snippet
-// var config = {
-//   apiKey: " AIzaSyD8kg9rKdJ6Z0Ju30QCXWjjxw3ZX6UZhgo ",
-//   authDomain: "commitment-935b5.firebaseapp.com",
-//   databaseURL: "https://commitment-935b5.firebaseio.com",
-//   projectId: "commitment-935b5",
-//   storageBucket: "commitment-935b5.appspot.com",
-//   messagingSenderId: "782966710150",
-// };
-// firebase.initializeApp(config);
-
 'use strict';
 
 //grab a form
@@ -21,7 +9,7 @@ const inputEmail = form.querySelector('#inputEmail');
 
 //config your firebase push
 const config = {
-  apiKey: " AIzaSyD8kg9rKdJ6Z0Ju30QCXWjjxw3ZX6UZhgo ",
+  apiKey: "AIzaSyD8kg9rKdJ6Z0Ju30QCXWjjxw3ZX6UZhgo",
   authDomain: "commitment-935b5.firebaseapp.com",
   databaseURL: "https://commitment-935b5.firebaseio.com",
   projectId: "commitment-935b5",

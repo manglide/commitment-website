@@ -8,8 +8,9 @@
 
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
-
-
+  div.abovehero {
+    margin-top: -300px;
+  }
 }
 
 

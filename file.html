@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+
+	<!-- CSS Reset -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],	/* iOS */
+        .x-gmail-data-detectors, 	/* Gmail */
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+	        display: none !important;
+	        opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+	        display:none !important;
+	   	}
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit () for help troubleshooting */
+         only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+    </style>
+
+    <!-- Progressive Enhancements -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #555555 !important;
+            border-color: #555555 !important;
+        }
+
+        /* Media Queries */
+         screen and (max-width: 600px) {
+
+            /* What it does: Adjust typography on small screens to improve readability */
+			.email-container p {
+				font-size: 17px !important;
+				line-height: 22px !important;
+			}
+
+		}
+
+		body {
+			font-family: 'Open Sans Condensed', sans-serif;
+		}
+
+	</style>
+
+	<!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+	<!--[if gte mso 9]>
+	<xml>
+		<o:OfficeDocumentSettings>
+			<o:AllowPNG/>
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+
+</head>
+
+<body width="100%" bgcolor="#ffffff" style="margin: 0; mso-line-height-rule: exactly;">
+	<div style="width: 100%; background: #ffffff; text-align: left;">
+
+		<!--
+			Set the email width. Defined in two places:
+			1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+			2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+		-->
+		<div style="max-width: 600px; margin: auto;" class="email-container">
+
+
+<!-- Email Body : BEGIN -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+
+	<!-- Hero Image, Flush : BEGIN -->
+	<tr>
+		<td bgcolor="#efeff0" style="text-align: center; background-image: url(https://asknigeria.com.ng/assets/images/emails/triangularbackground.png); background-size: cover; background-repeat: no-repeat;">
+      <hr />
+      <center>
+        <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 22px; line-height: 21px; color: #ffffff; font-weight: normal;">
+          Ask Nigeria - News Brief
+        </h1>
+      </center>
+			<!-- <img src="https://asknigeria.com.ng/assets/uploads/files/1583904597533-news-wrap-11th.jpg" width="600"
+      height="450" border="0" align="center" style="width: 600px; height: 450px; max-height: 450px; height: auto; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class="g-img"> -->
+		</td>
+	</tr>
+	<!-- Hero Image, Flush : END -->
+
+	<!-- 1 Column Text + Button : BEGIN -->
+	<tr>
+		<td bgcolor="#efeff0">
+			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+				<!-- IF notifications.length -->
+
+				<!-- ENDIF notifications.length -->
+<tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6435/delta-assembly-approves-n1-7b-for-diagnostic-medical-complex-project" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Delta Assembly approves N1.7b for diagnostic medical complex project
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6433/fmdq-admits-dangote-cements-n100bn-commercial-paper-on-its-platform" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  FMDQ admits Dangote Cements N100bn Commercial Paper on its platform
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6432/operation-accord-military-airstrike-kills-several-bandits-in-zamfara" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Operation Accord: Military airstrike kills several bandits in Zamfara
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6431/banditry-police-distributes-operational-vehicles-in-sokoto" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Banditry: Police distributes operational vehicles in Sokoto
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6430/military-airstrike-kills-several-bandits-in-zamfara" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Military airstrike kills several bandits in Zamfara
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6429/insurgency-gov-zulum-revokes-allocation-of-quarters-not-yet-occupied-in-bama" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Insurgency: Gov. Zulum revokes allocation of quarters not yet occupied in Bama
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6428/nerc-threatens-to-sanction-7-discos" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  NERC threatens to sanction 7 Discos
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6427/covid-19-ncdc-approves-pcr-laboratory-for-testing-in-akwa-ibom" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  COVID-19: NCDC approves PCR laboratory for testing in Akwa Ibom
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6426/covid-19-zamfara-govt-celebrates-14-days-without-new-case" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  COVID-19: Zamfara Govt. celebrates 14 days without new case
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6425/taiwan-donates-100-000-medical-masks-to-nigeria" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Taiwan donates 100,000 medical masks to Nigeria
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6424/el-rufai-opens-up-kaduna-gives-guidelines" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  El Rufai opens up Kaduna, gives guidelines
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6423/era-of-post-harvest-losses-gone-osinbajo" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Era of post-harvest losses gone Osinbajo
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6422/m-needed-for-lifesaving-aid-to-nigeria-wfp" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  m needed for lifesaving aid to Nigeria  WFP
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6421/nigeria-records-663-new-cases-of-covid-19-highest-daily-infections" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Nigeria records 663 new cases of COVID-19, highest daily infections
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6420/nkurunziza-un-chief-commiserates-with-burundians" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Nkurunziza: UN Chief commiserates with Burundians
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6408/insurgency-gov-zulum-revokes-allocation-of-quarters-not-yet-occupied-in-bama" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Insurgency: Gov. Zulum revokes allocation of quarters not yet occupied in Bama
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6407/minister-inaugurates-committee-on-management-disposal-of-pcbs" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Minister inaugurates committee on management, disposal of PCBs
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6406/africas-covid-19-cases-over-187-000-global-cases-hit-7m-who" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Africas COVID-19 cases over 187,000, global cases hit 7m  WHO
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6405/delta-assembly-approves-n1-7b-for-diagnostic-medical-complex-project" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  Delta Assembly approves N1.7b for diagnostic medical complex project
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <div>
+              <a style="text-decoration:none" href="https://asknigeria.com.ng/topic/6404/bua-cement-lifts-nse-indicators-further-by-0-34" target="_blank">
+                <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                  BUA Cement lifts NSE indicators further by 0.34%
+                </h1>
+              </a>
+            </div>
+					</td>
+        </tr><tr>
+          <td style="padding: 40px 40px 6px 40px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 15px; line-height: 20px; color: #555555;">
+            <hr />
+            <center>
+              <h1 style="margin: 0 0 10px 0; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; font-size: 18px; line-height: 21px; color: #444444; font-weight: normal;">
+                Ask Nigeria - People and Interests
+              </h1>
+            </center>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- 1 Column Text + Button : END -->
+
+</table>
+<!-- Email Body : END -->
+
+			<!-- Email Footer : BEGIN -->
+			<table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
+				<tr>
+					<td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;">
+						<br><br>
+						<!-- IF showUnsubscribe -->
+						If you don't want to receive notifications anymore, kindly <a href="https://asknigeria.com.ng/uid/` + id + `/settings">Unsubscribe</a>.
+						<!-- ENDIF showUnsubscribe -->
+						<br><br>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+  </div>
+</body>
+
+</html>

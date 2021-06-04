@@ -9,12 +9,14 @@ const inputEmail = form.querySelector('#inputEmail');
 
 //config your firebase push
 const config = {
-  apiKey: "AIzaSyD8kg9rKdJ6Z0Ju30QCXWjjxw3ZX6UZhgo",
-  authDomain: "commitment-935b5.firebaseapp.com",
-  databaseURL: "https://commitment-935b5.firebaseio.com",
-  projectId: "commitment-935b5",
-  storageBucket: "commitment-935b5.appspot.com",
-  messagingSenderId: "782966710150",
+  apiKey: "AIzaSyB-ot-wgbffwfwtMN9n5PbtQYdLs0sRYcU",
+  authDomain: "commitment-web.firebaseapp.com",
+  databaseURL: "https://commitment-web-default-rtdb.firebaseio.com",
+  projectId: "commitment-web",
+  storageBucket: "commitment-web.appspot.com",
+  messagingSenderId: "625683969096",
+  appId: "1:625683969096:web:3a78bf07c380765eba547d",
+  measurementId: "G-7422V5WY24",
 };
 
 
@@ -37,6 +39,14 @@ const config = {
                   mail: input.value
               }
           );
+          firebase.firestore().collection('commitment-web-default-rtdb').add({
+            to: input.value,
+            message: {
+              subject: 'Commitment Early Bird Access!',
+              text: 'Thank you for joining the Commitment early bird access program. \nWe are building something that would enable buyers and sellers shop with confidence online.\n We sure would let you know when we launch.\nBest,\nThe Commitment Team',
+              html: 'Thank you for joining the Commitment early bird access program. <code><br /></code>We are building something that would enable buyers and sellers shop with confidence online.<code><br /></code> We sure would let you know when we launch.<br />In the meantime, can you kindly help fill out this survey, it would mean a lot - https://bit.ly/3yjtT3J.<br />Best,<br />The Commitment Team',
+            },
+          })
         }
 
 

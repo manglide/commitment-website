@@ -43,8 +43,8 @@ const config = {
             to: input.value,
             message: {
               subject: 'Commitment Early Bird Access!',
-              text: 'Thank you for joining the Commitment early bird access program. \nWe are building something that would enable buyers and sellers shop with confidence online.\n We sure would let you know when we launch.\nBest,\nThe Commitment Team',
-              html: 'Thank you for joining the Commitment early bird access program. <code><br /></code>We are building something that would enable buyers and sellers shop with confidence online.<code><br /></code> We sure would let you know when we launch.<br />In the meantime, can you kindly help fill out this survey, it would mean a lot - https://bit.ly/3yjtT3J.<br />Best,<br />The Commitment Team',
+              text: 'Hi There,\n\nThank you for joining the Commitment early bird access program. \n\nWe are building something that would enable buyers and sellers shop with confidence online.\n\n We sure would let you know when we launch.\n\nBest,\n\nThe Commitment Team',
+              html: 'Hi There,<code><br /></code><code><br /></code>Thank you for joining the Commitment early bird access program. <code><br /></code><code><br /></code>We are building something that would enable buyers and sellers shop with confidence online.<code><br /></code><code><br /></code> We sure would let you know when we launch.<br /><br />In the meantime, can you kindly help fill out this survey, it would mean a lot - https://bit.ly/3yjtT3J.<br /><br />Best,<br /><br />The Commitment Team',
             },
           })
         }

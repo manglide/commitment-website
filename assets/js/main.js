@@ -86,6 +86,32 @@
     }
     mainSlider();
 
+    function otherSliders() {
+      var painsSlider = $('.pains');
+      painsSlider.on('init', function (e, slick) {
+        var $firstAnimatingElements = $('.pains').find('[data-animation]');
+        doAnimate($firstAnimatingElements);
+      });
+
+      function doAnimate(elements) {
+        var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        elements.each(function () {
+          var $this = $(this);
+          var $animationDelay = $this.data('delay');
+          var $animationType = 'animated ' + $this.data('animation');
+          $this.css({
+            'animation-delay': $animationDelay,
+            '-webkit-animation-delay': $animationDelay
+          });
+          $this.addClass($animationType).one(animationEndEvents, function () {
+            $this.removeClass($animationType);
+          });
+        });
+      }
+    }
+
+    otherSliders();
+
 
  // recent-active
   $('.customar-active').slick({

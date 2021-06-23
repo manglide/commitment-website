@@ -29,6 +29,9 @@
             body {
               font-family: 'Baloo 2', cursive;
             }
+            .slider-area {
+                height: 700px;
+            }
             .btnot {
                 background:#3972C1;
                 -moz-user-select:none;
@@ -50,6 +53,78 @@
                 border:0;
                 overflow:hidden;
                 margin:0
+            }
+            .circleText{
+                width: 128px;
+                height: 128px;
+                background: transparent;
+                border-radius:50%;
+                top: 0;
+                left: 0;
+                margin-top:-50px;
+                margin-left: 100px;
+                position:absolute;
+            }
+            .circleText2{
+                width: 128px;
+                height: 128px;
+                background: transparent;
+                border-radius:50%;
+                top: 0;
+                left: 0;
+                margin-top:-50px;
+                margin-left: 140px;
+                position:absolute;
+            }
+            #circleText1 {
+                background: url('assets/flaticon/loupe.png') center;
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
+            }
+            #circleText2 {
+                background: url('assets/flaticon/trust.png') center;
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
+            }
+            #circleText3 {
+                background: url('assets/flaticon/money-transfers.png') center;
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
+            }
+            #circleText4 {
+                background: url('assets/flaticon/user_review.png') center;
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
+            }
+            #circleText5 {
+                background: url('assets/flaticon/difficult.png') center;
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
+            }
+            #circleText6 {
+                background: url('assets/flaticon/order.png') center;
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
+            }
+            #circleText7 {
+                background: url('assets/flaticon/money-back-guarantee.png') center;
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
+            }
+            #circleText8 {
+                background: url('assets/flaticon/filter.png') center;
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
+            }
+            #circleText9 {
+                background: url('assets/flaticon/delivery-man.png') center;
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
+            }
+            #circleText10 {
+                background: url('assets/flaticon/database-storage.png') center;
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
             }
             </style>
    </head>
@@ -126,16 +201,19 @@
     <main>
 
         <!-- Slider Area Start-->
-        <div class="slider-area ">
+        <div class="slider-area">
             <div class="slider-active ">
                 <div class="single-slider slider-height slider-padding sky-blue d-flex align-items-center">
                     <div class="container align-items-center">
                         <div class="row d-flex align-items-center">
-                            <div class="col-lg-6 col-md-9 abovehero">
+                            <div class="col-lg-12 col-md-12 abovehero">
                                 <div class="hero__caption align-items-center">
                                     <!-- <span data-animation="fadeInUp" data-delay=".4s">Merchants, Marketers, Business Owners and Internet Stores</span> -->
-                                    <h1 data-animation="fadeInUp" data-delay=".6s">A Safer way to Shop on Instagram</h1>
-                                    <p data-animation="fadeInUp" data-delay=".8s">Everyday 200 people are scammed on Instagram. Commitment can help you find trustworthy vendors</p>
+                                    <h1 data-animation="fadeInUp" data-delay=".6s">An Easier way to Shop on Instagram</h1>
+                                    <p data-animation="fadeInUp" data-delay=".8s">Our instagram search and vendor rating 
+                                        service helps buyers on instagram who want to find items to buy, 
+                                        by making it easy to search for 
+                                        products/services using search filters, thereby reducing the amount of time it takes to find products.</p>
                                     <!-- Slider btn -->
                                    <div class="slider-btns">
                                         <!-- Hero-btn -->
@@ -153,11 +231,25 @@
                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-9 abovehero">
-                                <div class="hero__img d-none d-lg-block f-right" data-animation="fadeInRight" data-delay="1s">
-                                    <img src="assets/img/hero/joyce-busola-h7pDENTfYvU-unsplash.jpeg" alt="" class="rounded-circle">
+                            <!-- <div class="col-lg-6 col-md-9 abovehero">
+                                <div class="hero__img d-none d-lg-block f-right">
+                                    <video width="620" autoplay>
+                                        <source 
+                                        src="assets/videos/explainer.mp4" 
+                                        poster="https://cdn.biteable.com/social/renders/8734175/4190109/1849024/57a5139cdc797f8c27864820949e50187576a9ce.jpg" 
+                                        controlslist="nodownload"
+                                        type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video> 
+                                    <video width="620" autoplay controls="" 
+                                      id="Player" 
+                                      poster="https://cdn.biteable.com/social/renders/8734175/4190109/1849024/57a5139cdc797f8c27864820949e50187576a9ce.jpg" 
+                                      src="https://cdn.biteable.com/social/renders/8734175/4190109/1849024/57a5139cdc797f8c27864820949e50187576a9ce.mp4" 
+                                      controlslist="nodownload">
+                                    </video> 
+                                    <img src="assets/img/hero/joyce-busola-h7pDENTfYvU-unsplash.jpeg" alt="" class="rounded-circle"> 
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -166,50 +258,61 @@
         </div>
         <!-- Slider Area End -->
         <!-- About Starts -->
-        <div  id="" class="">
+        <div id="" class="">
               <section id="services" class="service-area sky-blue">
-                <div class="container">
+                <div class="container pains">
                     <!-- Section Tittle -->
                     <!-- Section Tittle -->
-                    <div class="row d-flex justify-content-center">
+                    <div data-animation="fadeInUp" data-delay=".6s" class="row d-flex justify-content-center">
                       <div class="col-lg-6">
                           <div class="section-tittle text-center">
-                              <h2>Do you shop on Instagram?</h2>
+                              <h2>We all know?</h2>
                           </div>
                       </div>
                   </div>
                     
-                    <div class="row">
+                    <div data-animation="fadeInUp" data-delay=".6s" class="row">
                         <div class="col-xl-3 col-lg-3">
                             <div class="services-caption active text-center mb-30">
+                                <div id="circleText1" class="circleText"></div>
                                 <div class="service-cap">
-                                    <h4><a href="#">Have you lost money to a fraudulent vendor?</a></h4>
+                                    <h4><a href="#">That Instagram Search wasn't made for searching of products</a></h4>
                                     <!-- <p>you only pay for items you've recieved and you have assurance that whatsoever you delivered would be paid for.</p> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3">
                             <div class="services-caption active text-center mb-30">
-                                
+                                <div id="circleText2" class="circleText"></div>
                                 <div class="service-cap">
-                                  <h4><a href="#">Have you ordered for something and gotten something entirely different?</a></h4>
+                                  <h4><a href="#">It's difficult to verify a vendor's trustworthiness on Instagram</a></h4>
                                   <!-- <p>Have issues with a delivery or item purchased, quickly file a dispute in the dispute resolution center.</p> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3">
                             <div class="services-caption active text-center mb-30">
-                                
+                                <div id="circleText3" class="circleText"></div>
                                 <div class="service-cap">
-                                  <h4><a href="#">Do you want to shop more on Instagram but you are scared of loosing money?</a></h4>
+                                  <h4><a href="#">We often have to leave Instagram to do a money transfer</a></h4>
                                   <!-- <p>Your funds are in good hands. From the app, simply request payments or authorize them yourself.</p> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3">
                             <div class="services-caption active text-center mb-30">
+                                <div id="circleText4" class="circleText"></div>
                                 <div class="service-cap">
-                                    <h4><a href="#">Do you struggle with keeping track of the items you ordered for?</a></h4>
+                                    <h4><a href="#">Vendor reviews can and has been faked</a></h4>
+                                    <!-- <p>you only pay for items you've recieved and you have assurance that whatsoever you delivered would be paid for.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="services-caption active text-center mb-30">
+                                <div class="service-cap">
+                                    <div id="circleText5" class="circleText"></div>
+                                    <h4><a href="#">It's difficult searching for that exact item you want</a></h4>
                                     <!-- <p>you only pay for items you've recieved and you have assurance that whatsoever you delivered would be paid for.</p> -->
                                 </div>
                             </div>
@@ -247,7 +350,7 @@
                 <div class="row d-flex justify-content-center">
                   <div class="col-lg-6">
                       <div class="section-tittle text-center">
-                          <h2>Commitment keeps you safe so you can focus on shopping</h2>
+                          <h2>What Commitment Offers</h2>
                       </div>
                   </div>
               </div>
@@ -257,29 +360,48 @@
                   <div class="col-xl-4 col-lg-4 col-md-6">
                       <div class="services-caption active text-center mb-30">
                           <div class="service-cap">
-                              <h4><a href="#">Get access to vetted and verified Instagram vendors</a></h4>
+                            <div id="circleText6" class="circleText2"></div>
+                              <h4><a href="#">Get the exact item you ordered</a></h4>
                               <!-- <p>you only pay for items you've recieved and you have assurance that whatsoever you delivered would be paid for.</p> -->
                           </div>
                       </div>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-6">
                       <div class="services-caption active text-center mb-30">
-                          
+                        <div id="circleText7" class="circleText2"></div>
                           <div class="service-cap">
-                            <h4><a href="#">Guaranteed returns and money back Guarantee</a></h4>
+                            <h4><a href="#">Guaranteed money back return</a></h4>
                             <!-- <p>Have issues with a delivery or item purchased, quickly file a dispute in the dispute resolution center.</p> -->
                           </div>
                       </div>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-6">
                       <div class="services-caption active text-center mb-30">
-                          
+                        <div id="circleText8" class="circleText2"></div>
                           <div class="service-cap">
-                            <h4><a href="#">Track and make changes to your order easily</a></h4>
+                            <h4><a href="#">Easy to find products using filters and categories</a></h4>
                             <!-- <p>Your funds are in good hands. From the app, simply request payments or authorize them yourself.</p> -->
                           </div>
                       </div>
                   </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="services-caption active text-center mb-30">
+                        <div id="circleText9" class="circleText2"></div>
+                        <div class="service-cap">
+                          <h4><a href="#">Confidence of item delivery at the right time</a></h4>
+                          <!-- <p>Your funds are in good hands. From the app, simply request payments or authorize them yourself.</p> -->
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="services-caption active text-center mb-30">
+                        <div id="circleText10" class="circleText2"></div>
+                        <div class="service-cap">
+                          <h4><a href="#">Access to a database of trusted and verified Instagram vendors</a></h4>
+                          <!-- <p>Your funds are in good hands. From the app, simply request payments or authorize them yourself.</p> -->
+                        </div>
+                    </div>
+                </div>
               </div>
             </div>
         </section>

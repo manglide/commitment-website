@@ -324,7 +324,23 @@
         });
       }
 
+/* Replace Images Slideshow */
+function replaceIMGS() {
+  var imagesArr = [
+    'assets/flaticon/christina-wocintechchat-no-bg.png', 
+    'assets/flaticon/dusan-jovic-no-bg.png', 
+    'assets/flaticon/glen-anthony-no-bg.png',
+    'assets/flaticon/surface-no-bg.png'
+  ];
+  setInterval(function(){ 
+     var image = document.getElementById("replace");
+     var selectedIndex = Math.floor(Math.random() * 4);
+     var selectedImage = imagesArr[selectedIndex];
+     $(image).attr('src', selectedImage);
+  }, 3000);
+}
 
+replaceIMGS();
 
 
 })(jQuery);

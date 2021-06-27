@@ -102,13 +102,25 @@
                 margin-left: 140px;
                 position:absolute;
             }
+            .circleTextNew {
+                width: 128px;
+                height: 128px;
+            }
+            .circleTextBigImage {
+                width: 408px;
+                height: 612px;
+            }
+            #circleTextBigImage {
+                background: url('assets/flaticon/christina-wocintechchat-x2-no-bg.png') center;
+                background-repeat: no-repeat;
+            }
             #circleText1 {
-                background: url('assets/flaticon/loupe.png') center;
+                background: url('assets/flaticon/colored/loupe.png') center;
                 background-repeat: no-repeat;
                 background-size: 100px 100px;
             }
             #circleText2 {
-                background: url('assets/flaticon/trust.png') center;
+                background: url('assets/flaticon/colored/trust.png') center;
                 background-repeat: no-repeat;
                 background-size: 100px 100px;
             }
@@ -118,12 +130,12 @@
                 background-size: 100px 100px;
             }
             #circleText4 {
-                background: url('assets/flaticon/user_review.png') center;
+                background: url('assets/flaticon/colored/review.png') center;
                 background-repeat: no-repeat;
                 background-size: 100px 100px;
             }
             #circleText5 {
-                background: url('assets/flaticon/difficult.png') center;
+                background: url('assets/flaticon/colored/speedometer.png') center;
                 background-repeat: no-repeat;
                 background-size: 100px 100px;
             }
@@ -153,20 +165,28 @@
                 background-size: 100px 100px;
             }
             #circleText11 {
-                background: url('assets/flaticon/instant.png') center;
+                background: url('assets/flaticon/colored/call-center.png') center;
                 background-repeat: no-repeat;
                 background-size: 100px 100px;
             }
             #circleText12 {
-                background: url('assets/flaticon/dove.png') center;
+                background: url('assets/flaticon/colored/dove.png') center;
                 background-repeat: no-repeat;
                 background-size: 100px 100px;
             }
             #circleText13 {
-                background: url('assets/flaticon/box.png') center;
+                background: url('assets/flaticon/colored/box.png') center;
                 background-repeat: no-repeat;
                 background-size: 100px 100px;
             }
+            .replace {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              /*margin-top: -600px;*/
+            }
+            .top-buffer { margin-top:40px; }
+            .premiseText { font-weight: 900; }
             </style>
    </head>
 
@@ -202,36 +222,9 @@
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
                             
-                            <!-- <div class="main-menu f-right d-none d-lg-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li class="active"><a href="https://bit.ly/2TkUOfA" class=""> Fill out Survey</a></li>
-                                    </ul>
-                                </nav>
-                            </div> -->
-                        </div>
-                        <!-- <div class="col-xl-10 col-lg-10 col-md-10">
                             
-                            <div class="main-menu f-right d-none d-lg-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li class="active"><a href="/"> Home</a></li>
-                                        <li><a href="#about">About</a></li>
-                                        <li><a href="#features">Features</a></li>
-                                        <li><a href="#services">Services</a></li>
-                                        <li><a href="#pricing">Pricing</a></li>
-                                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                        <li><a href="terms.html">Terms</a></li>
-                                        <li><a href="#contact">Contact</a></li>
-                                        <li><a href="#faqs">FAQs</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
                         </div>
                         
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -249,47 +242,25 @@
                         <div class="row d-flex align-items-center">
                             <div class="col-lg-6 col-md-6 abovehero">
                                 <div class="hero__caption align-items-center">
-                                    <!-- <span data-animation="fadeInUp" data-delay=".4s">Merchants, Marketers, Business Owners and Internet Stores</span> -->
-                                    <h2 style="margin-top: 13px;font-weight: 900;" data-animation="fadeInUp" data-delay=".6s">An easier way to find amazing products and credible sellers on Instagram.</h1>
+                                    <h2 style="font-weight: 900;" data-animation="fadeInUp" data-delay=".6s">An easier way to find amazing products and credible sellers on Instagram.</h1>
                                     <h4 data-animation="fadeInUp" data-delay=".8s">
-                                        Our search and vendor rating 
-                                        service helps you discover products you 
-                                        love on Instagram and reliable vendors to buy from.
+                                        
                                     </h3>
-                                    <!-- Slider btn -->
                                    <div class="slider-btns">
-                                        <!-- Hero-btn -->
-                                        <!-- <a data-animation="fadeInLeft" data-delay="1.0s" href="https://bit.ly/2TkUOfA" class="btn radius-btn">Call to Action</a> -->
-                                        <!-- <a data-animation="fadeInLeft" data-delay="1.0s" href="https://play.google.com/store/apps/details?id=ng.com.commitment.commitment" class="btn radius-btn">Download</a> -->
-                                        <form id="form-inline" class="form-inline d-flex">
-                                            <input type="email"
-                                              class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-                                              id="inputEmail" placeholder="Enter email address...">
-                                              <button type="submit" class="btnot">Join the waiting list</button>
+                                        <form>
+                                            <div class="form-group">
+                                              <input type="email" id="inputEmail" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" 
+                                              placeholder="Enter email">
+                                            </div>
+                                            <button type="submit" class="btn form-control btnot">Join the waiting list</button>
+                                              
                                         </form>
-                                        <!-- <a data-animation="fadeInLeft" data-delay="1.0s" href="#" class="btn radius-btn">Coming Soon. Click to get early access</a> -->
-                                        <!-- Video Btn -->
-                                        <!--<a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn ani-btn" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><i class="fas fa-play"></i></a>-->
                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-9 abovehero">
-                                <div class="hero__img d-none d-lg-block f-right">
-                                    <!-- <video width="620" autoplay>
-                                        <source 
-                                        src="assets/videos/explainer.mp4" 
-                                        poster="https://cdn.biteable.com/social/renders/8734175/4190109/1849024/57a5139cdc797f8c27864820949e50187576a9ce.jpg" 
-                                        controlslist="nodownload"
-                                        type="video/mp4">
-                                      Your browser does not support the video tag.
-                                    </video> 
-                                    <video width="620" autoplay controls="" 
-                                      id="Player" 
-                                      poster="https://cdn.biteable.com/social/renders/8734175/4190109/1849024/57a5139cdc797f8c27864820949e50187576a9ce.jpg" 
-                                      src="https://cdn.biteable.com/social/renders/8734175/4190109/1849024/57a5139cdc797f8c27864820949e50187576a9ce.mp4" 
-                                      controlslist="nodownload">
-                                    </video>  -->
-                                    <img id="replace" src="assets/flaticon/surface-no-bg.png" alt="" class="rounded-circle"> 
+                            <div class="col-lg-6 col-md-6 abovehero">
+                                <div class="hero__caption align-items-center">
+                                    <img id="replace" src="assets/flaticon/glen-anthony-no-bg.png" alt="" class="replace"> 
                                 </div>
                             </div>
                         </div>
@@ -298,13 +269,9 @@
 
             </div>
         </div>
-        <!-- Slider Area End -->
-        <!-- About Starts -->
         <div id="" class="">
               <section id="services" class="service-area sky-blue">
                 <div class="container pains">
-                    <!-- Section Tittle -->
-                    <!-- Section Tittle -->
                     <div data-animation="fadeInUp" data-delay=".6s" class="row d-flex justify-content-center">
                       <div class="col-lg-6">
                           <div class="section-tittle text-center">
@@ -312,73 +279,49 @@
                           </div>
                       </div>
                   </div>
-                    
-                    <div data-animation="fadeInUp" data-delay=".6s" class="row">
-                        <div class="col-xl-3 col-lg-3">
-                            <div class="services-caption active text-center mb-30">
-                                <div id="circleText1" class="circleText"></div>
-                                <div class="service-cap">
-                                    <h4><a href="#">That Instagram search was not built for product and vendor discovery</a></h4>
-                                    <!-- <p>you only pay for items you've recieved and you have assurance that whatsoever you delivered would be paid for.</p> -->
+
+                  <div class="container align-items-center" style="align-items: stretch;">
+                    <div class="row top-buffer">
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="row">
+                                <div id="circleText1" class="col-md-3 circleTextNew"></div>
+                                <div class="col-md-3 service-cap">
+                                    <h4 class="premiseText">Search</h4>
+                                    <p style="width:320px;">That Instagram search was not built for product and vendor discovery</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3">
-                            <div class="services-caption active text-center mb-30">
-                                <div id="circleText2" class="circleText"></div>
-                                <div class="service-cap">
-                                  <h4><a href="#">It is difficult to verify a vendor's trustworthiness on Instagram</a></h4>
-                                  <!-- <p>Have issues with a delivery or item purchased, quickly file a dispute in the dispute resolution center.</p> -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="col-xl-3 col-lg-3">
-                            <div class="services-caption active text-center mb-30">
-                                <div id="circleText3" class="circleText"></div>
-                                <div class="service-cap">
-                                  <h4><a href="#">We often have to leave Instagram to do a money transfer</a></h4>
-                                  <p>Your funds are in good hands. From the app, simply request payments or authorize them yourself.</p>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="col-xl-3 col-lg-3">
-                            <div class="services-caption active text-center mb-30">
-                                <div id="circleText4" class="circleText"></div>
-                                <div class="service-cap">
-                                    <h4><a href="#">Vendor reviews can be faked</a></h4>
-                                    <!-- <p>you only pay for items you've recieved and you have assurance that whatsoever you delivered would be paid for.</p> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3">
-                            <div class="services-caption active text-center mb-30">
-                                <div class="service-cap">
-                                    <div id="circleText5" class="circleText"></div>
-                                    <h4><a href="#">It is difficult finding the exact item you want</a></h4>
-                                    <!-- <p>you only pay for items you've recieved and you have assurance that whatsoever you delivered would be paid for.</p> -->
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="row">
+                                <div id="circleText2" class="col-md-3 circleTextNew"></div>
+                                <div class="col-md-3">
+                                    <h4 class="premiseText">Trust</h4>
+                                    <p style="width:320px;">It is difficult to verify a vendor's trustworthiness on Instagram</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
-                    <div class="row">
-                      
-                      <!-- <div class="col-xl-4 col-lg-4 col-md-6">
-                          <div class="services-caption active text-center mb-30">
-                              
-                              <div class="service-cap">
-                                <h4><a href="#">Have you had refunds for an Item bought on Instagram?</a></h4>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-xl-4 col-lg-4 col-md-6">
-                          <div class="services-caption active text-center mb-30">
-                              
-                              <div class="service-cap">
-                                <h4><a href="#">Do you often get replacements for items bought from Instagram?</a></h4>
-                              </div>
-                          </div>
-                      </div> -->
+                    <div class="row top-buffer">
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="row">
+                                <div id="circleText4" class="col-md-3 circleTextNew"></div>
+                                <div class="col-md-3">
+                                    <h4 class="premiseText">Reviews</h4>
+                                    <p style="width:320px;">Vendor reviews can be faked</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="row">
+                                <div id="circleText5" class="col-md-3 circleTextNew"></div>
+                                <div class="col-md-3">
+                                    <h4 class="premiseText">Orders</h4>
+                                    <p style="width:320px;">It is difficult finding the exact item you want</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
                   </div>
                 </div>
             </section>
@@ -387,8 +330,6 @@
         <div  id="" class="">
             <section id="services" class="service-area sky-blue section-padd-top30">
                 <div class="container">
-                    <!-- Section Tittle -->
-                    <!-- Section Tittle -->
                     <div class="row d-flex justify-content-center">
                     <div class="col-lg-6">
                         <div class="section-tittle text-center">
@@ -399,52 +340,39 @@
                 
 
                     <div class="row">
-                    <div class="col-xl-3 col-lg-3">
-                        <div class="services-caption active text-center mb-30">
-                            <div class="service-cap">
-                                <div id="circleText6" class="circleText2"></div>
-                                <h4><a href="#">An easy way to find products and vendors</a></h4>
-                                <!-- <p>you only pay for items you've recieved and you have assurance that whatsoever you delivered would be paid for.</p> -->
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div id="circleTextBigImage" class="circleTextBigImage">
+
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="row top-buffer">
+                                <div class="col-md-3">
+                                    <h4 class="premiseText">Ease</h4>
+                                    <p style="width:320px;">An easy way to find products and vendors</p>
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-md-3">
+                                    <h4 class="premiseText">Discovery</h4>
+                                    <p style="width:320px;">Discover products using search filters</p>
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-md-3">
+                                    <h4 class="premiseText">Rating System</h4>
+                                    <p style="width:320px;">Instagram vendor rating system</p>
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-md-3">
+                                    <h4 class="premiseText">Database</h4>
+                                    <p style="width:320px;">Access to a database of trusted and verified Instagram vendors</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-caption active text-center mb-30">
-                            <div id="circleText7" class="circleText2"></div>
-                            <div class="service-cap">
-                                <h4><a href="#">Money back guarantee</a></h4>
-                                <p>Have issues with a delivery or item purchased, quickly file a dispute in the dispute resolution center.</p> 
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="col-xl-3 col-lg-3">
-                        <div class="services-caption active text-center mb-30">
-                            <div id="circleText8" class="circleText2"></div>
-                            <div class="service-cap">
-                                <h4><a href="#">Dicover products using search filters</a></h4>
-                                <!-- <p>Your funds are in good hands. From the app, simply request payments or authorize them yourself.</p> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3">
-                        <div class="services-caption active text-center mb-30">
-                            <div id="circleText9" class="circleText2"></div>
-                            <div class="service-cap">
-                            <h4><a href="#">Instagram vendor rating system</a></h4>
-                            <!-- <p>Your funds are in good hands. From the app, simply request payments or authorize them yourself.</p> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3">
-                        <div class="services-caption active text-center mb-30">
-                            <div id="circleText10" class="circleText2"></div>
-                            <div class="service-cap">
-                            <h4><a href="#">Access to a database of trusted and verified Instagram vendors</a></h4>
-                            <!-- <p>Your funds are in good hands. From the app, simply request payments or authorize them yourself.</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 </div>
             </section>
         </div>
@@ -452,8 +380,6 @@
         <div  id="" class="">
             <section id="services" class="service-area sky-blue section-padd-top25">
                 <div class="container">
-                    <!-- Section Tittle -->
-                    <!-- Section Tittle -->
                     <div class="row d-flex justify-content-center">
                     <div class="col-lg-6">
                         <div class="section-tittle text-center">
@@ -461,54 +387,41 @@
                         </div>
                     </div>
                 </div>
-                
 
-                    <div class="row">
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="services-caption active text-center mb-30">
-                            <div class="service-cap">
-                                <div id="circleText11" class="circleText3"></div>
-                                <h4><a href="#">Find verified vendors in seconds</a></h4>
-                                <!-- <p>you only pay for items you've recieved and you have assurance that whatsoever you delivered would be paid for.</p> -->
+
+                <div class="container align-items-center" style="align-items: stretch;">
+                    <div class="row top-buffer">
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="row">
+                                <div id="circleText11" class="col-md-3 circleTextNew"></div>
+                                <div class="col-md-3 service-cap">
+                                    <h4 class="premiseText">Find Fast</h4>
+                                    <p style="width:320px;">Find verified vendors in seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="row">
+                                <div id="circleText12" class="col-md-3 circleTextNew"></div>
+                                <div class="col-md-3">
+                                    <h4 class="premiseText">Ease</h4>
+                                    <p style="width:320px;">Shop with ease and peace of mind</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-caption active text-center mb-30">
-                            <div id="circleText7" class="circleText2"></div>
-                            <div class="service-cap">
-                                <h4><a href="#">Money back guarantee</a></h4>
-                                <p>Have issues with a delivery or item purchased, quickly file a dispute in the dispute resolution center.</p> 
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="services-caption active text-center mb-30">
-                            <div id="circleText12" class="circleText3"></div>
-                            <div class="service-cap">
-                                <h4><a href="#">Shop with ease and peace of mind</a></h4>
-                                <!-- <p>Your funds are in good hands. From the app, simply request payments or authorize them yourself.</p> -->
+                    <div class="row top-buffer">
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="row">
+                                <div id="circleText13" class="col-md-3 circleTextNew"></div>
+                                <div class="col-md-3">
+                                    <h4 class="premiseText">Assurance</h4>
+                                    <p style="width:320px;">Get the item you ordered</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="services-caption active text-center mb-30">
-                            <div id="circleText13" class="circleText3"></div>
-                            <div class="service-cap">
-                            <h4><a href="#">Get the item you ordered</a></h4>
-                            <!-- <p>Your funds are in good hands. From the app, simply request payments or authorize them yourself.</p> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-xl-3 col-lg-3">
-                        <div class="services-caption active text-center mb-30">
-                            <div id="circleText10" class="circleText2"></div>
-                            <div class="service-cap">
-                            <h4><a href="#">Life</a></h4>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
+                  </div>
                 </div>
             </section>
         </div>
@@ -518,18 +431,22 @@
         <div  id="" class="">
           <section id="services" class="service-area sky-blue section-padd-top30">
             <div class="container">
-                <!-- Section Tittle -->
-                <!-- Section Tittle -->
                 <div class="row d-flex justify-content-center">
                   <div class="col-lg-6">
                       <div class="section-tittle text-center">
                           <h2>Commitment is launching Soon.</h2>
                       </div>
+                      <h3>
+                        Our search and vendor rating 
+                        service helps you discover products you 
+                        love on Instagram and reliable vendors to buy from.
+                      </h3>
+                      <br />
                       <form id="form-inline" class="form-inline d-flex">
                         <input type="email"
                           class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
                           id="inputEmail" placeholder="Enter email address...">
-                          <button type="submit" class="btnot">Get Notified when we do</button>
+                          <button type="submit" class="btnot">Get Notified when we launch</button>
                     </form>
                   </div>
               </div>

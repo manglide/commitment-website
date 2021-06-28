@@ -428,8 +428,8 @@ p {
       3.SERVICES css 
 ===========================*/
 .services-area {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   position: relative; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .services-area {

@@ -352,7 +352,7 @@ p {
     .header-hero .header-content .header-title {
       font-size: 44px;
       line-height: 55px;
-      color: #121212;
+      /*color: #121212;*/
       font-weight: 600; }
       @media (max-width: 767px) {
         .header-hero .header-content .header-title {

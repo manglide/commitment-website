@@ -43,7 +43,7 @@ const config = {
           alert('message field cannot be blank');
           return false;
         } else {
-          var mailsRef = firebase.database().ref('messages').push().set(
+          var mailsRef = firebase.database().ref('tradebloc-web-default-rtdb').push().set(
               {
                   contact: {
                     name: name.value,
@@ -53,7 +53,7 @@ const config = {
               }
           );
           firebase.firestore().collection('tradebloc-web-default-rtdb').add({
-            to: "adeyemisalau@gmail.com",
+            to: "info@tradebloc.io",
             message: {
               subject: 'User Enquiry from ' + name.value + '. ',
               text: 'Hi There,\n\nMessage from ' + email.value + '\n\n  '+message.value+' .\n\nBest,\n\nThe Tradebloc Team.',
@@ -81,7 +81,7 @@ const config = {
 
             //shows alert if everything went well.
             if(inputEmail.value != "" && inputName.value != "" && inputMessage.value != "") {
-              return alert('You will be notified when we go live.');
+              return alert('Thanks for your feedback, we would get back at you.');
             }
 
         })

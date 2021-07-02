@@ -2,9 +2,11 @@
 
 //grab a form
 const form = document.querySelector('#form-inline');
+const form1 = document.querySelector('#form-inline1');
 
 //grab an input
 const inputEmail = form.querySelector('#inputEmail');
+const inputEmail1 = form1.querySelector('#inputEmail1');
 
 
 //config your firebase push
@@ -22,7 +24,6 @@ const config = {
 
 //create a functions to push
     function firebasePush(input) {
-
 
         //prevents from braking
         if (!firebase.apps.length) {
@@ -53,7 +54,7 @@ const config = {
     }
 
 //push on form submit
-    if (form) {
+    
         form.addEventListener('submit', function (evt) {
             evt.preventDefault();
             firebasePush(inputEmail);
@@ -64,4 +65,17 @@ const config = {
             }
 
         })
-    }
+    
+
+    
+      form1.addEventListener('submit', function (evt) {
+          evt.preventDefault();
+          firebasePush(inputEmail1);
+
+          //shows alert if everything went well.
+          if(inputEmail1.value != "") {
+            return alert('You will be notified when we go live.');
+          }
+
+      })
+  

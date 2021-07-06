@@ -128,10 +128,12 @@
                         <div class="header-hero-content">
                             <h1 class="hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"><b>TradeBloc</b> <span>Consultancy</span> Partner for <b>Growth.</b></h1>
                             <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Connecting the dots on public Blockchain ledgers.</p>
-                            <!-- <div class="header-singup wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
-                                <input type="text" placeholder="username@yourdomain.com">
-                                <button class="main-btn">Reach us</button>
-                            </div> -->
+                            <form id="newsletterform" class="newsletterform">
+                                <div class="header-singup wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
+                                    <input id="newsletteremail" name="newsletteremail" type="text" placeholder="username@yourdomain.com">
+                                    <button type="submit" id="btnnewsletter" class="main-btn">Sign up for Newsletter</button>
+                                </div>
+                            </form>
                         </div> <!-- header hero content -->
                     </div>
                 </div> <!-- row -->
@@ -719,7 +721,7 @@
         <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
 
-        <script src="/assets/js/firebase.js"></script>
+        <script src="assets/js/firebase.js"></script>
     
 </body>
 

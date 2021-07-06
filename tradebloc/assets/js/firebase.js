@@ -2,11 +2,14 @@
 
 //grab a form
 const form = document.querySelector('#contact-form');
+const form1 = document.querySelector('#newsletterform');
 
 //grab an input
 const inputName = form.querySelector('#name');
 const inputEmail = form.querySelector('#email');
 const inputMessage = form.querySelector('#message');
+
+const useremail = form1.querySelector('#newsletteremail');
 
 
 //config your firebase push
@@ -22,6 +25,39 @@ const config = {
 };
 
 
+// add user email
+function firebasePushUserEmail(email) {
+
+
+  //prevents from braking
+  if (!firebase.apps.length) {
+      firebase.initializeApp(config);
+  }
+
+  //push itself
+  if(email.value == "") {
+    alert('please enter your email');
+    return false;
+  } else {
+    var mailsRef = firebase.database().ref('newsletter-tradebloc').push().set(
+        {
+            newsletter: {
+              email: email.value
+            }
+        }
+    );
+    firebase.firestore().collection('tradebloc-web-default-rtdb').add({
+      to: email.value,
+      message: {
+        subject: 'You have opted in ',
+        text: 'Hi There,\n\nThank you for your interest in our weekly TradeBloc Newsletter.\nWe hope to impact your life positively.\n\nBest,\n\nThe Tradebloc Team.',
+        html: 'Hi There,<br />Thank you for your interest in our weekly TradeBloc Newsletter. <br />We hope to impact your life positively <br /><br />Best,<br />The TradeBloc Team.',
+      },
+    })
+  }
+
+
+}
 
 //create a functions to push
     function firebasePush(name, email, message) {
@@ -74,8 +110,9 @@ const config = {
     }
 
 //push on form submit
-    if (form) {
-        form.addEventListener('submit', function (evt) {
+    
+        if(form) {
+          form.addEventListener('submit', function (evt) {
             evt.preventDefault();
             firebasePush(inputName, inputEmail, inputMessage);
 
@@ -84,5 +121,19 @@ const config = {
               return alert('Thanks for your feedback, we would get back at you.');
             }
 
-        })
-    }
+          })
+        }
+
+        if(form1) {
+          form1.addEventListener('submit', function (evt) {
+            evt.preventDefault();
+            firebasePushUserEmail(useremail);
+  
+            //shows alert if everything went well.
+            if(useremail.value != "") {
+              return alert('Thanks for your interest in our Newsletter. We would keep in touch.');
+            }
+  
+          });
+        }
+    

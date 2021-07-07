@@ -43,9 +43,9 @@ const config = {
           firebase.firestore().collection('commitment-web-default-rtdb').add({
             to: input.value,
             message: {
-              subject: 'Commitment Early Bird Access!',
-              text: 'Hi There,\n\nThank you for joining the Commitment early bird access program. \n\nWe are building something that would enable buyers and sellers shop with confidence online.\n\n We sure would let you know when we launch.\n\nBest,\n\nThe Commitment Team',
-              html: 'Hi There,<code><br /></code><code><br /></code>Thank you for joining the Commitment early bird access program. <code><br /></code><code><br /></code>We are building something that would enable buyers and sellers shop with confidence online.<code><br /></code><code><br /></code> We sure would let you know when we launch.<br /><br />In the meantime, can you kindly help fill out this survey, it would mean a lot - https://bit.ly/3yjtT3J.<br /><br />Best,<br /><br />The Commitment Team',
+              subject: 'Thanks for joining the Commitment waiting list!',
+              text: 'Hi There,\n\nThanks for joining the Commitment waiting list. \n\nWe are building a search and vendor rating service that helps you discover products you love on Instagram and reliable vendors to buy from.\n\n We sure would let you know when we launch.\n\nBest,\n\nThe Commitment Team',
+              html: 'Hi There,<code><br /></code><code><br /></code>Thanks for joining the Commitment waiting list. <code><br /></code><code><br /></code>We are building a search and vendor rating service that helps you discover products you love on Instagram and reliable vendors to buy from.<code><br /></code><code><br /></code> We sure would let you know when we launch.<br /><br />In the meantime, can you kindly help fill out this survey, it would mean a lot - https://bit.ly/3yjtT3J.<br /><br />Best,<br /><br />The Commitment Team',
             },
           })
         }
@@ -61,7 +61,8 @@ const config = {
 
             //shows alert if everything went well.
             if(inputEmail.value != "") {
-              return alert('You will be notified when we go live.');
+              return alert('Thanks for joining the waiting list. Your email has been captured successfully.');
+              inputEmail.value = ""
             }
 
         })
@@ -74,7 +75,8 @@ const config = {
 
           //shows alert if everything went well.
           if(inputEmail1.value != "") {
-            return alert('You will be notified when we go live.');
+            return alert('Thanks for joining the waiting list. Your email has been captured successfully.');
+            inputEmail1.value = ""
           }
 
       })

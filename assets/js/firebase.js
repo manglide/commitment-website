@@ -61,8 +61,8 @@ const config = {
 
             //shows alert if everything went well.
             if(inputEmail.value != "") {
-              return alert('Thanks for joining the waiting list. Your email has been captured successfully.');
               inputEmail.value = ""
+              return alert('Thanks for joining the waiting list. Your email has been captured successfully.');
             }
 
         })
@@ -75,8 +75,8 @@ const config = {
 
           //shows alert if everything went well.
           if(inputEmail1.value != "") {
-            return alert('Thanks for joining the waiting list. Your email has been captured successfully.');
             inputEmail1.value = ""
+            return alert('Thanks for joining the waiting list. Your email has been captured successfully.');
           }
 
       })
